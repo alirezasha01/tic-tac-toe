@@ -2,18 +2,11 @@ import React from "react";
 import { useState } from "react";
 import "../style.css"
 
-const Square = () => {
-const [value, setValue] = useState(null);
-function handleClick() {
-    setValue('X');
-}
+const Square = ({ value , onSquareClick }) => {
   return (
-    <button
-      className="square"
-      onClick={handleClick}
-    >
-      {value}
-    </button>
+        <button className="square" onClick={onSquareClick}>
+          {value}
+        </button>
   );
 }
 
